@@ -1,15 +1,14 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
-
 public class AddTwoNumbers {
     public static void main(String[] args) {
         final ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
         final ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
 
-         ListNode listNode = AddTwoNumbers.addTwoNumbers(l1,l2);
-        System.out.println(listNode);
+        ListNode listNode = AddTwoNumbers.addTwoNumbers(l1,l2);
+        ListNode current = listNode;
+        while (current != null) {
+            System.out.println(current.val);
+            current = current.next;
+        }
     }
 
 
